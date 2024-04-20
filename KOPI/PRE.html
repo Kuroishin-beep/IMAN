@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>PRE KOPI</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="globals.css" />
+<link rel="stylesheet" href="styleguide.css" />
+<link rel="stylesheet" href="style.css" />
+<script>
+function addToTotal(value) {
+    var currentTotal = parseInt(document.calculator.ans.value) || 0;
+    var newValue = currentTotal + parseInt(value);
+    document.calculator.ans.value = newValue;
+}
+</script>
+</head>
+<body bgcolor="#000000" text="gold">
+    
+<form name="calculator" >
+    First Name: <input type="text" name="firstname"><br>
+    Last Name: <input type="text" name="lastname"><br>
+    Phone: <input type="text" name="lastname"><br>
+<input type="button" value="CAPPUCCINO" onClick="addToTotal('130')">
+<input type="button" value="MACCHIATO" onClick="addToTotal('150')">
+<input type="button" value="MACCHIATO" onClick="addToTotal('150')"><br>
+<input type="button" value="FLAT-WHITE" onClick="addToTotal('140')">
+<input type="button" value="LATTE" onClick="addToTotal('120')">
+<input type="button" value="MOCHA" onClick="addToTotal('150')">
+<input type="button" value="AFFOGATO" onClick="addToTotal('160')"><br>
+
+
+
+
+<input type="reset" value="CANCEL">
+<input type="button" value="PAY NOW" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<br>Total: <input type="textfield" name="ans" value="">
+</form>
+</body>
+</html>
